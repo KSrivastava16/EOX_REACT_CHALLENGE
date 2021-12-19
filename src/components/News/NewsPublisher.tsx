@@ -19,7 +19,7 @@ const NewsPublisher = (props: INewsPublisherprops) => {
   //@ts-ignore
   useEffect(() => {
     props.getPublisherData(params.publisher);
-  },[params.publisher]);
+  },[props,params.publisher]);
 
   useEffect(() => {
     setPublisherData(props.publisherData);
