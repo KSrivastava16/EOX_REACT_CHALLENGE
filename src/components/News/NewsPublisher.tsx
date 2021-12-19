@@ -22,7 +22,8 @@ const NewsPublisher = (props: INewsPublisherprops) => {
       getPublisherData(publisher);
     }
     getData();
-  }, []);
+    // eslint-disable-next-line
+  }, [""]);
 
   useEffect(() => {
     setPublisherData(props.publisherData);
