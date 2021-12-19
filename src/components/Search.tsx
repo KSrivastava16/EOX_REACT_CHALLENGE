@@ -11,6 +11,7 @@ const Search = (props:ISearchProps) => {
     const [search,setSearch] =useState("")
 
     const onSearchChange = (e:any)=>{
+        console.log("hitted")
      const value  = e.target.value;
      if(value){
          setSearch(value)
