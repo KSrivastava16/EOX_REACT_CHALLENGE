@@ -18,7 +18,7 @@ const NewsPublisher = (props: INewsPublisherprops) => {
 
   useEffect(() => {
     props.getPublisherData(params.publisher);
-  }, []);
+  });
 
   useEffect(() => {
     setPublisherData(props.publisherData);

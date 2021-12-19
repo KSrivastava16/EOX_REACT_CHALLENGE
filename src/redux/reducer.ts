@@ -28,12 +28,16 @@ export default function reducer(state = initialState, action: any) {
 
     case GET_PUBLISHER_DATA:
       let news;
-      if (state.news ) {
+      if (state.news) {
         //@ts-ignore
         news = JSON.parse(localStorage.getItem("news"));
       } else news = state.news;
       const publisherData = news.filter(
-        (news: any) => (news.PUBLISHER .replace(/[^a-zA-Z0-9-. ]+/i, "")).replace(/[^a-zA-Z0-9-. ]+/i, "") === payload
+        (news: any) =>
+          news.PUBLISHER.replace(/[^a-zA-Z0-9-. ]+/i, "").replace(
+            /[^a-zA-Z0-9-. ]+/i,
+            ""
+          ) === payload
       );
       //   publisherData.sort((val1:any,val2:any)=>val1.TIMESTAMP-val2.TIMESTAMP)
       return { ...state, publisherData };
