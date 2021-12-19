@@ -1,0 +1,19 @@
+.news-publisher {
+  text-align: center;
+  padding: 2%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.publisher-news-tile {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  column-gap: 5%;
+  row-gap: 5%;
+  margin: 5%;
+}
+
+.publisher-title {
+  font-size: 1.5rem;
+  margin-bottom: 3%;
+}

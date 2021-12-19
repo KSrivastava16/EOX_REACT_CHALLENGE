@@ -1,0 +1,9 @@
+.news-container {
+  padding: 2%;
+  text-align: center;
+}
+
+.news-container-title {
+  margin-bottom: 2%;
+  font-size: 2rem;
+}

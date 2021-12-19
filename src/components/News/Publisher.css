@@ -1,0 +1,27 @@
+.publisher-list {
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+.publishers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  column-gap: 4%;
+}
+
+.publisher-tile {
+  box-shadow: 3px 8px #888888;
+  margin: 2%;
+  padding: 5%;
+  text-align: center;
+}
+
+.publisher-link {
+  text-decoration: none;
+  color: black;
+}
+
+.publisher-link:hover {
+  font-size: 14px;
+  color: blue;
+}
