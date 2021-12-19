@@ -6,11 +6,10 @@ import NewsTile, { INewsTile } from "./NewsTile";
 import "./NewsPublisher.css";
 import Search from "../Search";
 
-interface INewsPublisherprops{
-    publisherData:any;
-    getPublisherData:(val:any)=>void;
+interface INewsPublisherprops {
+  publisherData: any;
+  getPublisherData: (val: any) => void;
 }
-
 
 const NewsPublisher = (props: INewsPublisherprops) => {
   const [publisherData, setPublisherData] = useState([]);
@@ -18,8 +17,11 @@ const NewsPublisher = (props: INewsPublisherprops) => {
 
   //@ts-ignore
   useEffect(() => {
-    props.getPublisherData(params.publisher);
-  },[props,params.publisher]);
+    function getData() {
+      props.getPublisherData(params.publisher);
+    }
+    getData();
+  }, []);
 
   useEffect(() => {
     setPublisherData(props.publisherData);
