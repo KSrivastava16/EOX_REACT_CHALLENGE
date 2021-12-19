@@ -14,11 +14,12 @@ interface INewsPublisherprops {
 const NewsPublisher = (props: INewsPublisherprops) => {
   const [publisherData, setPublisherData] = useState([]);
   const params = useParams();
-
+  const {getPublisherData} = props;
   //@ts-ignore
+  const {publisher} =params;
   useEffect(() => {
     function getData() {
-      props.getPublisherData(params.publisher);
+      getPublisherData(publisher);
     }
     getData();
   }, []);
